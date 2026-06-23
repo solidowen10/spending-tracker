@@ -1,0 +1,15 @@
+export const CURRENCIES = [
+  { code: "TWD", label: "Taiwan Dollar", symbol: "NT$" },
+  { code: "USD", label: "US Dollar", symbol: "$" },
+  { code: "EUR", label: "Euro", symbol: "€" },
+  { code: "JPY", label: "Japanese Yen", symbol: "¥" },
+  { code: "GBP", label: "British Pound", symbol: "£" },
+  { code: "KRW", label: "South Korean Won", symbol: "₩" },
+  { code: "HKD", label: "Hong Kong Dollar", symbol: "HK$" },
+  { code: "SGD", label: "Singapore Dollar", symbol: "S$" },
+  { code: "CNY", label: "Chinese Yuan", symbol: "¥" },
+  { code: "THB", label: "Thai Baht", symbol: "฿" },
+  { code: "VND", label: "Vietnamese Dong", symbol: "₫" },
+  { code: "AUD", label: "Australian Dollar", symbol: "A$" },
+  { code: "CAD", label: "Canadian Dollar", symbol: "C$" },
+] as const;
