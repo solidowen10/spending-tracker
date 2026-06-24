@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import BottomNav from "./BottomNav";
 import AddEntrySheet from "./AddEntrySheet";
 
@@ -20,15 +20,43 @@ export default function AppShell({ children, categories, currency }: AppShellPro
       <div className="app-shell">
         {children}
 
-        <footer className="app-footer">
-          <div className="app-footer-divider" />
-          <p>A tool to track your spending.</p>
-          <p>
-            ©{" "}
-            <a href="https://tool.selinnaowen.com/">
-              lürú tools
-            </a>
-          </p>
+        <footer className="luru-footer" style={{ "--shell-accent": "#FF8A3D" } as CSSProperties}>
+          <style>{`
+            .luru-footer {
+              margin-top: 64px;
+              padding: 28px 20px 112px;
+              border-top: 1px solid rgba(25, 29, 33, 0.1);
+              text-align: center;
+            }
+
+            .luru-footer-tagline {
+              margin: 0 0 8px;
+              color: #8B949E;
+              font-family: "Plus Jakarta Sans", sans-serif;
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 1.45;
+              letter-spacing: 0;
+            }
+
+            .luru-footer-link {
+              color: var(--shell-accent);
+              font-family: "Fredoka", sans-serif;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4;
+              letter-spacing: 0;
+              text-decoration: none;
+            }
+
+            .luru-footer-link:hover {
+              text-decoration: underline;
+            }
+          `}</style>
+          <p className="luru-footer-tagline">Small tools, built and self-hosted by Owen.</p>
+          <a className="luru-footer-link" href="https://tool.selinnaowen.com/">
+            lürú tools
+          </a>
         </footer>
       </div>
 
