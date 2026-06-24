@@ -434,7 +434,6 @@ main {
   --luru-page-pad: 20px;
 }
 
-.topbar,
 .app-shell,
 .bottom-nav-inner {
   width: min(100%, var(--luru-page-width)) !important;
@@ -443,14 +442,22 @@ main {
   margin-right: auto !important;
 }
 
+.app-shell {
+  padding: 0 var(--luru-page-pad) 112px !important;
+}
+
+/* Topbar is INSIDE app-shell, so do not center it again */
 .topbar {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 80 !important;
   height: auto !important;
   left: auto !important;
   right: auto !important;
-  padding: 32px var(--luru-page-pad) 28px !important;
+  padding: 24px 0 16px !important;
   background: var(--cream) !important;
   border-bottom: none !important;
 }
@@ -463,7 +470,7 @@ main {
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: space-between !important;
   gap: 10px !important;
 }
 
@@ -492,10 +499,6 @@ main {
 .topbar-title em {
   color: var(--mango) !important;
   font-style: italic !important;
-}
-
-.app-shell {
-  padding: 0 var(--luru-page-pad) 112px !important;
 }
 
 main {
@@ -530,86 +533,50 @@ main {
   }
 }
 
-.topbar-inner{position:relative}
-.topbar-menu-wrap{margin-left:auto;position:relative;display:flex;align-items:center}
-.topbar-menu-btn{background:transparent!important;border:none!important;box-shadow:none!important;padding:.25rem!important;font-size:1.6rem!important;line-height:1!important;color:var(--plum)!important;cursor:pointer}
-.topbar-menu{position:absolute;right:0;top:42px;width:220px;background:#fff;border:1px solid var(--smoke);border-radius:14px;box-shadow:0 10px 28px rgba(45,36,22,.12);overflow:hidden;z-index:9999}
-.topbar-menu a{display:block;padding:.85rem 1rem;color:var(--plum);text-decoration:none;font-size:.9rem}
-.topbar-menu a:hover{background:var(--cream)}
-.topbar-menu hr{margin:0;border:0;border-top:1px solid var(--smoke)}
-
-/* final spending tracker polish */
-:root{--luru-page-width:920px}
-.topbar{position:sticky!important;top:0!important;z-index:900!important;background:var(--cream)!important;padding-top:1.5rem!important;padding-bottom:.75rem!important}
-.topbar-inner{width:min(100%,920px)!important;max-width:920px!important;margin:0 auto!important;padding:0 1.25rem!important}
-main,.page-shell,.dashboard-shell{width:min(100%,920px)!important;max-width:920px!important;margin-left:auto!important;margin-right:auto!important}
-.overall-sticky-hero{position:sticky!important;top:76px!important;z-index:850!important;background:var(--cream)!important}
-.overall-sticky-hero>div{transform:scale(1.15);transform-origin:center;margin:.75rem 0 1rem!important}
-.overall-sticky-hero div[style*="width"]{font-size:1.1rem}
-
-.dashboard-sticky-controls{position:sticky!important;top:76px!important;z-index:875!important;background:var(--cream)!important;padding-bottom:1rem!important}
-.overall-sticky-hero{top:190px!important}
-
-
-/* sticky dashboard top: scroll starts at By category */
-.dashboard-sticky-controls{
-  position:sticky!important;
-  top:76px!important;
-  z-index:950!important;
-  background:var(--cream)!important;
-  padding:1rem 0 0!important;
-}
-.overall-sticky-hero{
-  position:sticky!important;
-  top:190px!important;
-  z-index:949!important;
-  background:var(--cream)!important;
-  padding-bottom:2rem!important;
-  box-shadow:0 18px 0 var(--cream)!important;
-}
-.overall-sticky-hero + section{
-  padding-top:2rem!important;
-}
-.overall-sticky-hero + section h3{
-  text-align:left!important;
-}
-.overall-sticky-hero + section > div{
-  justify-items:center!important;
-  justify-content:center!important;
-  text-align:center!important;
+/* Clean topbar menu */
+.topbar-menu-wrap {
+  position: relative !important;
+  margin-left: auto !important;
 }
 
-
-/* repair dashboard sticky: one block only */
-.dashboard-sticky-hero{
-  position:sticky!important;
-  top:76px!important;
-  z-index:950!important;
-  background:var(--cream)!important;
-  padding:0 0 1.5rem!important;
-  box-shadow:0 16px 0 var(--cream)!important;
+.topbar-menu-btn {
+  background: transparent !important;
+  border: none !important;
+  color: var(--plum) !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  padding: 0.25rem 0.5rem !important;
+  line-height: 1 !important;
 }
 
-.dashboard-sticky-controls,
-.overall-sticky-hero{
-  position:static!important;
-  top:auto!important;
-  box-shadow:none!important;
+.topbar-menu {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  min-width: 190px !important;
+  background: #fff !important;
+  border: 1px solid var(--smoke) !important;
+  border-radius: 0.875rem !important;
+  box-shadow: 0 8px 28px rgba(43,27,61,0.12) !important;
+  padding: 0.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  z-index: 200 !important;
 }
 
-.category-section{
-  padding-top:2rem!important;
+.topbar-menu a {
+  display: block !important;
+  padding: 0.7rem 0.8rem !important;
+  color: var(--plum) !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.625rem !important;
+  white-space: nowrap !important;
 }
 
-.category-section h3{
-  max-width:920px!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
+.topbar-menu a:hover {
+  background: var(--smoke) !important;
 }
-
-.category-section>div{
-  justify-content:center!important;
-  justify-items:center!important;
-  text-align:center!important;
-}
-

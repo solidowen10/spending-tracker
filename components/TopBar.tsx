@@ -10,6 +10,7 @@ interface TopBarProps {
 
 export default function TopBar({ backHref }: TopBarProps) {
   const [open, setOpen] = useState(false);
+
   return (
     <header className="topbar">
       <div className="topbar-inner">
@@ -29,13 +30,16 @@ export default function TopBar({ backHref }: TopBarProps) {
         </a>
 
         <div className="topbar-menu-wrap">
-          <button className="topbar-menu-btn" onClick={() => setOpen(!open)} aria-label="Open menu">☰</button>
+          <button className="topbar-menu-btn" onClick={() => setOpen(!open)} aria-label="Open menu">
+            ☰
+          </button>
+
           {open && (
             <div className="topbar-menu">
-              <a href="/lifestyle-tracker">Lifestyle Tracker</a>
+              <a href="https://tool.selinnaowen.com/">All tools</a>
               <a href="https://tool.selinnaowen.com/split-bill/">Shared Ledger</a>
-              <hr />
-              <a href="/spending-tracker/api/auth/sign-out">Log Out</a>
+              <a href="https://tool.selinnaowen.com/lifestyle-tracker/">Lifestyle Tracker</a>
+              <a href="/auth/logout?next=/">Log out</a>
             </div>
           )}
         </div>

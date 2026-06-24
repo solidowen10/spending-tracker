@@ -193,21 +193,21 @@ export default function JarProgress({
       <div style={{ textAlign: "center" }}>
         <div
           style={{
-            fontSize: "0.7rem",
-            fontWeight: 600,
+            fontSize: isOverall ? "1.75rem" : "0.7rem",
+            fontWeight: isOverall ? 700 : 600,
             color: "var(--plum)",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            maxWidth: size + 8,
+            maxWidth: isOverall ? 420 : size + 8,
           }}
         >
           {label}
         </div>
-        <div style={{ fontSize: "0.68rem", color: hasLimit ? fill : "var(--muted)", fontWeight: 600 }}>
+        <div style={{ fontSize: isOverall ? "2rem" : "0.68rem", color: hasLimit ? fill : "var(--muted)", fontWeight: isOverall ? 700 : 600, lineHeight: 1.15 }}>
           {spentFormatted}
           {hasLimit && limitFormatted && (
-            <span style={{ color: "var(--muted)", fontWeight: 400 }}> / {limitFormatted}</span>
+            <span style={{ color: "var(--muted)", fontWeight: 500 }}> / {limitFormatted}</span>
           )}
         </div>
       </div>

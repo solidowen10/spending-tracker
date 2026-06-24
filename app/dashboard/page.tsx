@@ -49,7 +49,7 @@ export default async function DashboardPage({ searchParams }: Props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "1rem 1.25rem 0.5rem",
+            padding: "1rem 0 0.5rem",
           }}
         >
           {/* Prev */}
