@@ -40,7 +40,7 @@ export default async function EntriesPage({ searchParams }: Props) {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 1.25rem" }}>
           <Link href={`/entries?year=${prevMonth.year}&month=${prevMonth.month}`}
              style={{ color: "var(--mango)", textDecoration: "none", fontWeight: 700, fontSize: "1.25rem" }}>‹</Link>
-          <h2 style={{ fontFamily: "var(--font-fredoka)", fontSize: "1.1rem", fontWeight: 600, color: "var(--plum)", margin: 0 }}>
+          <h2 style={{ fontFamily: "var(--font-seasons)", fontSize: "1.1rem", fontWeight: 600, color: "var(--plum)", margin: 0 }}>
             {MONTH_NAMES[month - 1]} {year}
           </h2>
           <Link href={isFutureMonth ? "#" : `/entries?year=${nextMonth.year}&month=${nextMonth.month}`}

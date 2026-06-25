@@ -2,6 +2,8 @@
 
 /* ─── lürú brand palette ─────────────────────────────────────────────────── */
 :root {
+  --font-seasons: "The Seasons", "The Seasons Regular", "The Seasons Light", Georgia, serif;
+
   --cream:   #FFF8F0;   /* page background */
   --mango:   #FF8A3D;   /* primary / brand accent */
   --grape:   #7C5CFC;   /* secondary accent */
@@ -14,8 +16,8 @@
 }
 
 @theme inline {
-  --font-display: var(--font-fredoka);
-  --font-body:    var(--font-jakarta);
+  --font-display: var(--font-seasons);
+  --font-body:    var(--font-seasons);
 
   --color-cream:  var(--cream);
   --color-mango:  var(--mango);
@@ -35,7 +37,7 @@ html, body {
   min-height: 100%;
   background: var(--cream);
   color: var(--plum);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-seasons);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -105,7 +107,7 @@ body {
 }
 
 .topbar-title {
-  font-family: var(--font-fredoka);
+  font-family: var(--font-seasons);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -365,7 +367,7 @@ main {
 }
 
 .topbar-title {
-  font-family: 'Fraunces', Georgia, serif !important;
+  font-family: var(--font-seasons) !important;
   font-size: 20px !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em !important;
@@ -412,7 +414,7 @@ main {
 }
 
 .topbar-title {
-  font-family: 'Fraunces', Georgia, serif !important;
+  font-family: var(--font-seasons) !important;
   font-size: 20px !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em !important;
@@ -489,7 +491,7 @@ main {
 }
 
 .topbar-title {
-  font-family: 'Fraunces', Georgia, serif !important;
+  font-family: var(--font-seasons) !important;
   font-size: 20px !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em !important;
@@ -579,4 +581,10 @@ main {
 
 .topbar-menu a:hover {
   background: var(--smoke) !important;
+}
+
+.category-section>div{
+  justify-content:center!important;
+  justify-items:center!important;
+  text-align:center!important;
 }

@@ -60,7 +60,7 @@ const SHELL_STYLES = `
   min-width: 0;
   overflow: hidden;
   color: #171B20;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-seasons);
   font-size: clamp(28px, 3.1vw, 40px);
   font-weight: 650;
   line-height: 1;
@@ -129,7 +129,7 @@ const SHELL_STYLES = `
 .luru-menu-label {
   padding: 8px 10px 5px;
   color: #8B949E;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-seasons);
   font-size: 10px;
   font-weight: 800;
   line-height: 1.2;
@@ -146,7 +146,7 @@ const SHELL_STYLES = `
   gap: 10px;
   border-radius: 8px;
   color: #273039;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-seasons);
   font-size: 14px;
   font-weight: 650;
   line-height: 1.2;

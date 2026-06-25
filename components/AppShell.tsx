@@ -32,7 +32,7 @@ export default function AppShell({ children, categories, currency }: AppShellPro
             .luru-footer-tagline {
               margin: 0 0 8px;
               color: #8B949E;
-              font-family: "Plus Jakarta Sans", sans-serif;
+              font-family: var(--font-seasons);
               font-size: 13px;
               font-weight: 500;
               line-height: 1.45;
@@ -41,7 +41,7 @@ export default function AppShell({ children, categories, currency }: AppShellPro
 
             .luru-footer-link {
               color: var(--shell-accent);
-              font-family: "Fredoka", sans-serif;
+              font-family: var(--font-seasons);
               font-size: 14px;
               font-weight: 600;
               line-height: 1.4;

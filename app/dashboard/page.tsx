@@ -73,7 +73,7 @@ export default async function DashboardPage({ searchParams }: Props) {
           <div style={{ textAlign: "center" }}>
             <h2
               style={{
-                fontFamily: "var(--font-fredoka)",
+                fontFamily: "var(--font-seasons)",
                 fontSize: "1.1rem",
                 fontWeight: 600,
                 color: "var(--plum)",
@@ -159,7 +159,7 @@ export default async function DashboardPage({ searchParams }: Props) {
             <section className="category-section" style={{ padding: "0 1.25rem" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-fredoka)",
+                  fontFamily: "var(--font-seasons)",
                   fontSize: "1rem",
                   fontWeight: 600,
                   color: "var(--plum)",
@@ -194,7 +194,7 @@ export default async function DashboardPage({ searchParams }: Props) {
             {/* Daily spend chart (simple bar) */}
             {Object.keys(summary.dailyTotals).length > 0 && (
               <section style={{ padding: "1.5rem 1.25rem 0" }}>
-                <h3 style={{ fontFamily: "var(--font-fredoka)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
+                <h3 style={{ fontFamily: "var(--font-seasons)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
                   Daily spending
                 </h3>
                 <DailyBars dailyTotals={summary.dailyTotals} fmt={fmt} />
@@ -204,7 +204,7 @@ export default async function DashboardPage({ searchParams }: Props) {
             {/* Recent entries */}
             {summary.entries.length > 0 && (
               <section style={{ padding: "1.5rem 1.25rem 0" }}>
-                <h3 style={{ fontFamily: "var(--font-fredoka)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
+                <h3 style={{ fontFamily: "var(--font-seasons)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
                   Recent
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
@@ -230,7 +230,7 @@ export default async function DashboardPage({ searchParams }: Props) {
                           <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{e.note}</div>
                         )}
                       </div>
-                      <div style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)", fontSize: "1rem" }}>
+                      <div style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)", fontSize: "1rem" }}>
                         {fmt(e.amount)}
                       </div>
                     </div>
@@ -263,14 +263,14 @@ export default async function DashboardPage({ searchParams }: Props) {
               <div style={{ color: "var(--muted)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
                 Total {year}
               </div>
-              <div style={{ fontFamily: "var(--font-fredoka)", fontSize: "2.8rem", fontWeight: 600, color: "var(--plum)", lineHeight: 1.1 }}>
+              <div style={{ fontFamily: "var(--font-seasons)", fontSize: "2.8rem", fontWeight: 600, color: "var(--plum)", lineHeight: 1.1 }}>
                 {fmt(yearly.total)}
               </div>
             </div>
 
             {/* Monthly bar chart */}
             <section className="category-section" style={{ padding: "0 1.25rem" }}>
-              <h3 style={{ fontFamily: "var(--font-fredoka)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
+              <h3 style={{ fontFamily: "var(--font-seasons)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
                 Per month
               </h3>
               <MonthlyBars perMonth={yearly.perMonth} fmt={fmt} year={year} />
@@ -278,7 +278,7 @@ export default async function DashboardPage({ searchParams }: Props) {
 
             {/* Category breakdown */}
             <section style={{ padding: "1.5rem 1.25rem 0" }}>
-              <h3 style={{ fontFamily: "var(--font-fredoka)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
+              <h3 style={{ fontFamily: "var(--font-seasons)", fontSize: "1rem", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>
                 By category
               </h3>
               {yearly.perCategory.filter((c) => c.spent > 0).map((c) => (
@@ -314,7 +314,7 @@ export default async function DashboardPage({ searchParams }: Props) {
                       />
                     </div>
                   </div>
-                  <div style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)", fontSize: "0.9rem", minWidth: "64px", textAlign: "right" }}>
+                  <div style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)", fontSize: "0.9rem", minWidth: "64px", textAlign: "right" }}>
                     {fmt(c.spent)}
                   </div>
                 </div>

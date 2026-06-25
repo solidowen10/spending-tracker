@@ -57,7 +57,7 @@ export default function EntryList({ entries, categories, currency }: EntryListPr
                 <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.04em" }}>
                   {new Date(date + "T00:00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}
                 </span>
-                <span style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)", fontSize: "0.9rem" }}>
+                <span style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)", fontSize: "0.9rem" }}>
                   {fmt(dayTotal)}
                 </span>
               </div>
@@ -103,7 +103,7 @@ export default function EntryList({ entries, categories, currency }: EntryListPr
                         </div>
                       )}
                     </div>
-                    <div style={{ fontFamily: "var(--font-fredoka)", fontWeight: 700, color: "var(--plum)", fontSize: "1.05rem", flexShrink: 0 }}>
+                    <div style={{ fontFamily: "var(--font-seasons)", fontWeight: 700, color: "var(--plum)", fontSize: "1.05rem", flexShrink: 0 }}>
                       {fmt(e.amount)}
                     </div>
                     <div style={{ display: "flex", gap: "4px" }}>

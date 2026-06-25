@@ -29,7 +29,7 @@ function Inner() {
         borderRadius: "1rem",
         border: "none",
         cursor: "pointer",
-        fontFamily: "var(--font-jakarta)",
+        fontFamily: "var(--font-seasons)",
         fontWeight: 600,
         fontSize: "1rem",
         textDecoration: "none",

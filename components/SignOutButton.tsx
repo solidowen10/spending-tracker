@@ -13,7 +13,7 @@ export default function SignOutButton() {
         border: "1.5px solid var(--cherry)",
         background: "transparent",
         color: "var(--cherry)",
-        fontFamily: "var(--font-jakarta)",
+        fontFamily: "var(--font-seasons)",
         fontWeight: 600,
         fontSize: "0.95rem",
         cursor: "pointer",

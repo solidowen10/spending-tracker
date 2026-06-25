@@ -147,12 +147,12 @@ export default function SettingsClient({
       {/* Currency */}
       <div style={sectionStyle}>
         <div style={{ padding: "1rem 1.25rem" }}>
-          <div style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>Currency</div>
+          <div style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)", marginBottom: "0.75rem" }}>Currency</div>
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
             <select
               value={selectedCurrency}
               onChange={(e) => setSelectedCurrency(e.target.value)}
-              style={{ flex: 1, padding: "0.6rem 0.875rem", borderRadius: "0.75rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-jakarta)", fontSize: "0.9rem", color: "var(--plum)", cursor: "pointer" }}
+              style={{ flex: 1, padding: "0.6rem 0.875rem", borderRadius: "0.75rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-seasons)", fontSize: "0.9rem", color: "var(--plum)", cursor: "pointer" }}
             >
               {CURRENCIES.map((c) => (
                 <option key={c.code} value={c.code}>{c.label} ({c.code})</option>
@@ -172,7 +172,7 @@ export default function SettingsClient({
       {/* Budget limits */}
       <div style={sectionStyle}>
         <div style={sectionHeader} onClick={() => setLimitsOpen(!limitsOpen)}>
-          <span style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)" }}>Monthly budget limits</span>
+          <span style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)" }}>Monthly budget limits</span>
           <span style={{ color: "var(--muted)", fontSize: "1rem" }}>{limitsOpen ? "▲" : "▼"}</span>
         </div>
         {limitsOpen && (
@@ -187,7 +187,7 @@ export default function SettingsClient({
                 placeholder="No limit"
                 value={overallLimit}
                 onChange={(e) => setOverallLimit(formatAmountInput(e.target.value))}
-                style={{ width: "110px", padding: "0.4rem 0.6rem", borderRadius: "0.625rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-jakarta)", fontSize: "0.9rem", color: "var(--plum)" }}
+                style={{ width: "110px", padding: "0.4rem 0.6rem", borderRadius: "0.625rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-seasons)", fontSize: "0.9rem", color: "var(--plum)" }}
               />
               <button
                 onClick={handleSaveOverallLimit}
@@ -208,7 +208,7 @@ export default function SettingsClient({
                   placeholder="No limit"
                   value={catLimits[cat.id] ?? ""}
                   onChange={(e) => setCatLimits({ ...catLimits, [cat.id]: formatAmountInput(e.target.value) })}
-                  style={{ width: "110px", padding: "0.4rem 0.6rem", borderRadius: "0.625rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-jakarta)", fontSize: "0.9rem", color: "var(--plum)" }}
+                  style={{ width: "110px", padding: "0.4rem 0.6rem", borderRadius: "0.625rem", border: "1.5px solid var(--smoke)", background: "var(--smoke)", fontFamily: "var(--font-seasons)", fontSize: "0.9rem", color: "var(--plum)" }}
                 />
                 <button
                   onClick={() => handleSaveCatLimit(cat.id)}
@@ -226,7 +226,7 @@ export default function SettingsClient({
       {/* Categories */}
       <div style={sectionStyle}>
         <div style={sectionHeader} onClick={() => setCatOpen(!catOpen)}>
-          <span style={{ fontFamily: "var(--font-fredoka)", fontWeight: 600, color: "var(--plum)" }}>Categories</span>
+          <span style={{ fontFamily: "var(--font-seasons)", fontWeight: 600, color: "var(--plum)" }}>Categories</span>
           <span style={{ color: "var(--muted)", fontSize: "1rem" }}>{catOpen ? "▲" : "▼"}</span>
         </div>
         {catOpen && (
@@ -239,7 +239,7 @@ export default function SettingsClient({
                       type="text"
                       value={editCatData.name}
                       onChange={(e) => setEditCatData({ ...editCatData, name: e.target.value })}
-                      style={{ flex: 1, padding: "0.35rem 0.6rem", borderRadius: "0.5rem", border: "1.5px solid var(--mango)", background: "#fff", fontFamily: "var(--font-jakarta)", fontSize: "0.85rem", color: "var(--plum)" }}
+                      style={{ flex: 1, padding: "0.35rem 0.6rem", borderRadius: "0.5rem", border: "1.5px solid var(--mango)", background: "#fff", fontFamily: "var(--font-seasons)", fontSize: "0.85rem", color: "var(--plum)" }}
                     />
                     <button onClick={() => handleEditCat(cat.id)} disabled={saving === "editCat" + cat.id} style={{ background: "none", border: "none", color: "var(--lime)", cursor: "pointer", lineHeight: 0 }}><Check size={16} /></button>
                     <button onClick={() => setEditingCat(null)} style={{ background: "none", border: "none", color: "var(--muted)", cursor: "pointer", lineHeight: 0 }}><X size={16} /></button>
@@ -262,7 +262,7 @@ export default function SettingsClient({
                   placeholder="Category name"
                   value={newCatName}
                   onChange={(e) => setNewCatName(e.target.value)}
-                  style={{ padding: "0.5rem 0.75rem", borderRadius: "0.625rem", border: "1.5px solid var(--mango)", background: "#fff", fontFamily: "var(--font-jakarta)", fontSize: "0.9rem", color: "var(--plum)" }}
+                  style={{ padding: "0.5rem 0.75rem", borderRadius: "0.625rem", border: "1.5px solid var(--mango)", background: "#fff", fontFamily: "var(--font-seasons)", fontSize: "0.9rem", color: "var(--plum)" }}
                 />
                 <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
                   {EMOJIS.map((e) => (

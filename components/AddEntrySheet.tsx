@@ -138,7 +138,7 @@ export default function AddEntrySheet({
 
         <h2
           style={{
-            fontFamily: "var(--font-fredoka)",
+            fontFamily: "var(--font-seasons)",
             fontSize: "1.4rem",
             fontWeight: 600,
             color: "var(--plum)",
@@ -186,7 +186,7 @@ export default function AddEntrySheet({
                     border: `1.5px solid ${active ? c.color : "var(--smoke)"}`,
                     background: active ? c.color + "22" : "var(--smoke)",
                     color: active ? c.color : "var(--muted)",
-                    fontFamily: "var(--font-jakarta)",
+                    fontFamily: "var(--font-seasons)",
                     fontSize: "0.8rem",
                     fontWeight: active ? 600 : 400,
                     cursor: "pointer",
@@ -236,7 +236,7 @@ export default function AddEntrySheet({
             border: "none",
             background: saving ? "var(--smoke)" : "var(--mango)",
             color: saving ? "var(--muted)" : "#fff",
-            fontFamily: "var(--font-jakarta)",
+            fontFamily: "var(--font-seasons)",
             fontWeight: 700,
             fontSize: "1rem",
             cursor: saving ? "not-allowed" : "pointer",
@@ -266,7 +266,7 @@ const inputStyle: React.CSSProperties = {
   borderRadius: "0.75rem",
   border: "1.5px solid var(--smoke)",
   background: "var(--smoke)",
-  fontFamily: "var(--font-jakarta)",
+  fontFamily: "var(--font-seasons)",
   fontSize: "1rem",
   color: "var(--plum)",
   outline: "none",
