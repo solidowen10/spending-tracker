@@ -11,8 +11,8 @@ function safeNext(rawNext: string | undefined) {
   }
 
   try {
-    const parsed = new URL(rawNext, "https://tool.selinnaowen.com");
-    if (parsed.origin !== "https://tool.selinnaowen.com") return "/spending-tracker/dashboard";
+    const parsed = new URL(rawNext, "https://tool.luruee.com");
+    if (parsed.origin !== "https://tool.luruee.com") return "/spending-tracker/dashboard";
     return `${parsed.pathname}${parsed.search}${parsed.hash}`;
   } catch {
     return "/spending-tracker/dashboard";
@@ -25,7 +25,7 @@ export default async function LoginPage({ searchParams }: Props) {
   const session = await getSession();
 
   if (session) redirect(next);
-  const authLogin = new URL("/auth/login", "https://tool.selinnaowen.com");
+  const authLogin = new URL("/auth/login", "https://tool.luruee.com");
   authLogin.searchParams.set("next", next);
   redirect(authLogin.toString());
 }

@@ -18,9 +18,10 @@ const APP_NAV = [
 ];
 
 const OTHER_TOOLS = [
-  { label: "Shared Ledger", href: "https://tool.selinnaowen.com/split-bill", icon: "🧾" },
-  { label: "Lifestyle Tracker", href: "https://tool.selinnaowen.com/lifestyle-tracker", icon: "🌿" },
-  { label: "All Tools", href: "https://tool.selinnaowen.com/", icon: "🏠" },
+  { label: "Shared Ledger", href: "https://tool.luruee.com/split-bill", icon: "🧾" },
+  { label: "Receipt Scanner", href: "https://tool.luruee.com/receipt-scanner", icon: "📷" },
+  { label: "Lifestyle Tracker", href: "https://tool.luruee.com/lifestyle-tracker", icon: "🌿" },
+  { label: "All Tools", href: "https://tool.luruee.com/", icon: "🏠" },
 ];
 
 const SHELL_STYLES = `
@@ -241,7 +242,7 @@ export default function TopBar({ backHref }: TopBarProps) {
         )}
 
         <Link href="/dashboard" className="luru-brand" aria-label="Spending Tracker home">
-          <img className="luru-brand-logo" src={LOGO_SRC} alt="lürú tools" />
+          <img className="luru-brand-logo" src={LOGO_SRC} alt="lürúee tools" />
           <span className="luru-app-name">
             Spending <em>Tracker</em>
           </span>

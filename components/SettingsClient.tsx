@@ -139,7 +139,7 @@ export default function SettingsClient({
           )}
           <div>
             <div style={{ fontWeight: 700, color: "var(--plum)" }}>{userName}</div>
-            <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>lürú tools account</div>
+            <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>lürúee tools account</div>
           </div>
         </div>
       </div>

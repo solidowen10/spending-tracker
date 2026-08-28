@@ -7,7 +7,7 @@ import { LayoutDashboard, List, Settings, Grid2X2 } from "lucide-react";
 const NAV = [
   { href: "/dashboard", label: "Dashboard", Icon: LayoutDashboard, external: false },
   { href: "/entries", label: "Entries", Icon: List, external: false },
-  { href: "https://tool.selinnaowen.com/", label: "Tools", Icon: Grid2X2, external: true },
+  { href: "https://tool.luruee.com/", label: "Tools", Icon: Grid2X2, external: true },
   { href: "/settings", label: "Settings", Icon: Settings, external: false },
 ];
 

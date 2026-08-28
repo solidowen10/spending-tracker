@@ -52,11 +52,18 @@ export default function AppShell({ children, categories, currency }: AppShellPro
             .luru-footer-link:hover {
               text-decoration: underline;
             }
+
+            .luru-footer-text {
+              margin: 0;
+              color: #8B949E;
+              font-family: var(--font-seasons);
+              font-size: 13px;
+              font-weight: 650;
+              line-height: 1.45;
+              letter-spacing: 0;
+            }
           `}</style>
-          <p className="luru-footer-tagline">Small tools, built and self-hosted by Owen.</p>
-          <a className="luru-footer-link" href="https://tool.selinnaowen.com/">
-            lürú tools
-          </a>
+          <p className="luru-footer-text">© lürúee tools</p>
         </footer>
       </div>
 

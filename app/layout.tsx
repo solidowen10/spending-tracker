@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "lürú | Spending Tracker",
+  title: "lürúee | Spending Tracker",
   description: "Track your spending, set limits, stay on budget.",
 
   icons: {
