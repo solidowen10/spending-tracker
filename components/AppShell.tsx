@@ -62,8 +62,32 @@ export default function AppShell({ children, categories, currency }: AppShellPro
               line-height: 1.45;
               letter-spacing: 0;
             }
+
+            .luru-footer-links {
+              display: inline-flex;
+              gap: 14px;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin-top: 8px;
+            }
+
+            .luru-footer-links a {
+              color: var(--shell-accent);
+              font-family: var(--font-seasons);
+              font-size: 13px;
+              font-weight: 650;
+              text-decoration: none;
+            }
+
+            .luru-footer-links a:hover {
+              text-decoration: underline;
+            }
           `}</style>
           <p className="luru-footer-text">© lürúee tools</p>
+          <nav className="luru-footer-links" aria-label="Legal links">
+            <a href="https://tool.luruee.com/privacy">Privacy</a>
+            <a href="https://tool.luruee.com/terms">Terms</a>
+          </nav>
         </footer>
       </div>
 
